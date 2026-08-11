@@ -35,6 +35,31 @@ def log(msg):
     print(msg, flush=True)
 
 
+def _windows(since, until, shard):
+    """Decoupe [since, until[ en fenetres de fetch.
+
+    Mensuelles pour le 1min (un shard = un mois, donc une fenetre = un fichier
+    ecrit), annuelles sinon. Une seule fenetre pour les TF a fichier unique :
+    les volumes y sont derisoires.
+    """
+    if shard == "single":
+        return [(since, until)]
+    from datetime import datetime, timezone
+    out = []
+    d = datetime.fromtimestamp(since / 1000, timezone.utc)
+    y, m = d.year, (d.month if shard == "month" else 1)
+    cur = since
+    while cur < until:
+        if shard == "month":
+            ny, nm = (y + 1, 1) if m == 12 else (y, m + 1)
+        else:
+            ny, nm = y + 1, 1
+        nxt = int(datetime(ny, nm, 1, tzinfo=timezone.utc).timestamp() * 1000)
+        out.append((cur, min(nxt, until)))
+        cur, y, m = nxt, ny, nm
+    return out
+
+
 def load_registry(repo):
     path = os.path.join(repo, "meta", "instruments.json")
     if os.path.exists(path):
@@ -79,15 +104,35 @@ def sync_tf(repo, asset, source, inst_id, tf, mode, since_arg):
     else:
         since = R.to_ms(since_arg or DEFAULT_SINCE.get(tf))
 
-    rows = OKX.fetch_candles(inst_id, cfg["bar"], since_ms=since, until_ms=until,
-                             src=R.SOURCES[source])
-    if not rows:
+    # Fetch par fenetres, avec ecriture apres chacune. Sans cela, un 1min sur un
+    # an garde 500 000 bougies en memoire pendant 15 min et perd tout sur la
+    # moindre coupure. En backfill on parcourt du plus recent au plus ancien :
+    # `earliest()` descend au fur et a mesure, donc relancer la commande reprend
+    # ou elle s'est arretee au lieu de tout refaire.
+    windows = _windows(since, until or R.now_ms(), cfg["shard"])
+    total_added = 0
+    first_ts = last_ts = None
+    n_rows = 0
+    for w_since, w_until in reversed(windows):
+        rows = OKX.fetch_candles(inst_id, cfg["bar"], since_ms=w_since,
+                                 until_ms=w_until, src=R.SOURCES[source])
+        if not rows:
+            continue
+        added, _skipped, _ = R.merge_rows(repo, asset, source, tf, rows)
+        total_added += added
+        n_rows += len(rows)
+        first_ts = rows[0][0] if first_ts is None else min(first_ts, rows[0][0])
+        last_ts = rows[-1][0] if last_ts is None else max(last_ts, rows[-1][0])
+        if len(windows) > 1:
+            log("      %-5s %s : %6d bougies, +%d" %
+                (tf, R.iso(w_since)[:7], len(rows), added))
+
+    if not n_rows:
         log("    %-5s a jour" % tf)
         return 0
-    added, skipped, _ = R.merge_rows(repo, asset, source, tf, rows)
     log("    %-5s %6d bougies (%s -> %s) +%d nouvelles" %
-        (tf, len(rows), R.iso(rows[0][0])[:10], R.iso(rows[-1][0])[:10], added))
-    return added
+        (tf, n_rows, R.iso(first_ts)[:10], R.iso(last_ts)[:10], total_added))
+    return total_added
 
 
 def derive_tf(repo, asset, source, tf):

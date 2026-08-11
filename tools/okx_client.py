@@ -40,7 +40,7 @@ def _throttle():
     _last_call[0] = time.time()
 
 
-def api(host, path, params=None, retries=5):
+def api(host, path, params=None, retries=9):
     qs = ""
     if params:
         qs = "?" + "&".join("%s=%s" % (k, v) for k, v in params.items() if v is not None)
@@ -53,10 +53,14 @@ def api(host, path, params=None, retries=5):
             with urllib.request.urlopen(req, timeout=30) as resp:
                 payload = json.load(resp)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            # OKX renvoie des 503 intermittents (mesure : ~1 requete sur 3 lors
+            # d'un episode). Avec 5 tentatives, un fetch de 1 700 pages echoue
+            # presque a coup sur ; il en faut assez pour que la probabilite
+            # cumulee reste negligeable sur toute la pagination.
             if attempt == retries - 1:
                 raise RuntimeError("echec reseau sur %s: %s" % (url, e))
             time.sleep(delay)
-            delay *= 2
+            delay = min(delay * 2, 30.0)
             continue
         code = payload.get("code")
         if code == "0":
@@ -64,7 +68,7 @@ def api(host, path, params=None, retries=5):
         # 50011 = rate limit : on backoff au lieu d'abandonner
         if code == "50011":
             time.sleep(delay)
-            delay *= 2
+            delay = min(delay * 2, 30.0)
             continue
         raise RuntimeError("OKX %s sur %s : %s" % (code, url, payload.get("msg")))
     raise RuntimeError("rate limit persistant sur %s" % url)
