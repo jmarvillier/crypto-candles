@@ -18,6 +18,14 @@ COLUMNS = ["ts", "open", "high", "low", "close", "vol_base", "vol_quote", "src"]
 # bar     = valeur du parametre `bar` de l'API OKX (None => derive)
 # ms      = duree nominale d'une bougie (None => calendaire, pas de grille fixe)
 # shard   = decoupage des fichiers : "month" | "year" | "single"
+#
+# Regle : sous-repertoire annuel pour TOUT ce qui est sous l'hebdomadaire, afin
+# que la structure soit uniforme et previsible quand on parcourt le repo a la
+# main. Le 1min descend au mois (2,7 Mo par mois, un fichier annuel serait trop
+# gros). A partir du 1w, fichier unique : une bougie hebdomadaire peut chevaucher
+# deux annees (semaine du 30/12) et une bougie annuelle n'appartient a aucun
+# repertoire d'annee — sharder la produirait une convention arbitraire qu'il
+# faudrait connaitre pour lire correctement.
 TF_TABLE = {
     "1min":  {"bar": "1m",     "ms": 60_000,      "shard": "month"},
     "5min":  {"bar": "5m",     "ms": 300_000,     "shard": "year"},
@@ -25,8 +33,8 @@ TF_TABLE = {
     "30min": {"bar": "30m",    "ms": 1_800_000,   "shard": "year"},
     "1h":    {"bar": "1H",     "ms": 3_600_000,   "shard": "year"},
     "4h":    {"bar": "4H",     "ms": 14_400_000,  "shard": "year"},
-    "12h":   {"bar": "12Hutc", "ms": 43_200_000,  "shard": "single"},
-    "1d":    {"bar": "1Dutc",  "ms": 86_400_000,  "shard": "single"},
+    "12h":   {"bar": "12Hutc", "ms": 43_200_000,  "shard": "year"},
+    "1d":    {"bar": "1Dutc",  "ms": 86_400_000,  "shard": "year"},
     "1w":    {"bar": "1Wutc",  "ms": 604_800_000, "shard": "single"},
     "1mon":  {"bar": "1Mutc",  "ms": None,        "shard": "single"},
     "1y":    {"bar": None,     "ms": None,        "shard": "single",

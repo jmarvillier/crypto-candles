@@ -16,11 +16,19 @@ import time
 import urllib.error
 import urllib.request
 
-HEADERS = {"User-Agent": "ohlcv-repo-sync/1.0", "Accept": "application/json"}
-HOST_XPERP = "my.okx.com"
+HEADERS = {"User-Agent": "crypto-candles/1.0", "Accept": "application/json"}
+# Les bougies XPERP sont servies par les deux hotes, et `www` mesure ~25 % plus
+# rapide (0,39 s contre 0,52 s par requete). `my` reste la reference EEA pour
+# tout ce qui touche au compte ; pour la market data publique, on prend le plus
+# rapide. Les deux hotes listent aussi les 112 XPERP en FUTURES.
+HOST_XPERP = "www.okx.com"
 HOST_SWAP = "www.okx.com"
 
-# history-candles : 20 req / 2 s / IP. On reste large sous la limite.
+# history-candles : 20 req / 2 s / IP, soit 0,1 s minimum entre deux appels.
+# En pratique la latence reseau (0,4 a 1,5 s selon l'heure) domine largement ce
+# throttle : il ne se declenche quasiment jamais. Ne pas se fier a MIN_INTERVAL
+# pour estimer une duree de fetch — mesurer une requete reelle et multiplier
+# par le nombre de pages (bougies / 300).
 MIN_INTERVAL = 0.12
 _last_call = [0.0]
 

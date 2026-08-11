@@ -1,7 +1,7 @@
 {
   "asset": "BTC",
   "source": "xperp",
-  "updated_at": "2026-08-11T09:05:09Z",
+  "updated_at": "2026-08-11T09:22:06Z",
   "columns": [
     "ts",
     "open",
@@ -145,6 +145,5 @@
       "n_zero_volume": 0,
       "gaps_sample": []
     }
-  },
-  "instId": "BTC-USD_UM_XPERP-310404"
+  }
 }
