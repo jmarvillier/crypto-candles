@@ -5,5 +5,12 @@
     "swap": "BTC-USDT-SWAP",
     "xperp": "BTC-USD_UM_XPERP-310404",
     "xperp_list_ms": 1774845000428
+  },
+  "ETH": {
+    "asset": "ETH",
+    "ct_val": "0.001",
+    "swap": "ETH-USDT-SWAP",
+    "xperp": "ETH-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775016000441
   }
 }
