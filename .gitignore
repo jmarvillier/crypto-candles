@@ -1,0 +1,12 @@
+# jamais versionne : identifiants
+secrets.json
+*.token
+
+__pycache__/
+*.pyc
+*.tmp
+.cache/
+.venv/
+# caches Parquet locaux, non versionnes (voir SPEC.md)
+cache/
+*.parquet
