@@ -5,13 +5,16 @@ Les deux sources sont stockees SEPAREMENT (data/<ACTIF>/xperp/ et
 data/<ACTIF>/perp/) : chacune est une serie homogene, directement backtestable,
 sans saut de prix artificiel.
 
-  init   : cree l'arborescence et tire tout l'historique disponible.
-  update : ne tire que ce qui manque depuis la derniere bougie stockee.
+  init     : cree l'arborescence et tire tout l'historique disponible.
+  update   : ne tire que ce qui manque depuis la derniere bougie stockee.
+  backfill : etend l'historique VERS LE PASSE, en s'arretant a la premiere
+             bougie deja stockee. Ne refetche jamais l'existant.
 
 Exemples
     python sync_pair.py --repo . --asset BTC --mode init
     python sync_pair.py --repo . --asset BTC --mode init --source perp --since 2020-01-01
     python sync_pair.py --repo . --asset all --mode update
+    python sync_pair.py --repo . --asset BTC --source perp --mode backfill --since 2024-01-01
 """
 import argparse
 import json
@@ -54,17 +57,29 @@ def sync_tf(repo, asset, source, inst_id, tf, mode, since_arg):
         return 0
 
     step = cfg["ms"]
-    stored = R.cutoff(repo, asset, source, tf)
+    until = None
 
     if mode == "update":
+        stored = R.cutoff(repo, asset, source, tf)
         if stored is None:
             log("    %-5s aucune donnee -> lancer --mode init" % tf)
             return 0
         since = stored + (step or 1)
+    elif mode == "backfill":
+        since = R.to_ms(since_arg)
+        if since is None:
+            log("    %-5s --since obligatoire en backfill" % tf)
+            return 0
+        until = R.earliest(repo, asset, source, tf)
+        if until is None:
+            log("    %-5s aucune donnee -> comportement init" % tf)
+        elif until <= since:
+            log("    %-5s deja couvert depuis %s" % (tf, R.iso(until)[:10]))
+            return 0
     else:
         since = R.to_ms(since_arg or DEFAULT_SINCE.get(tf))
 
-    rows = OKX.fetch_candles(inst_id, cfg["bar"], since_ms=since,
+    rows = OKX.fetch_candles(inst_id, cfg["bar"], since_ms=since, until_ms=until,
                              src=R.SOURCES[source])
     if not rows:
         log("    %-5s a jour" % tf)
@@ -93,6 +108,8 @@ def sync_source(repo, asset, source, inst_id, mode, tfs, since_arg):
             sync_tf(repo, asset, source, inst_id, tf, mode, since_arg)
     for tf in tfs:
         if tf in R.DERIVED_TFS:
+            # a re-deriver apres tout ajout, y compris un backfill qui rallonge
+            # la serie source par le debut
             derive_tf(repo, asset, source, tf)
     meta = R.write_source_meta(repo, asset, source, extra={"instId": inst_id})
     log("      %d TF, %d bougies" %
@@ -128,7 +145,8 @@ def main():
     ap.add_argument("--repo", default=".")
     ap.add_argument("--asset", "--pair", dest="asset", required=True,
                     help="BTC, ou 'all' pour tout le repo")
-    ap.add_argument("--mode", choices=["init", "update"], default="update")
+    ap.add_argument("--mode", choices=["init", "update", "backfill"],
+                    default="update")
     ap.add_argument("--source", default="all",
                     choices=["all", "xperp", "perp"],
                     help="quelle serie alimenter (defaut : les deux)")

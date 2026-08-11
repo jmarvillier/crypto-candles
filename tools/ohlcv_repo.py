@@ -339,6 +339,20 @@ def cutoff(repo, asset, source, tf):
     return int(rows[-1][0]) if rows else None
 
 
+def earliest(repo, asset, source, tf):
+    """Open time de la PREMIERE bougie stockee, ou None. Base du backfill.
+
+    Permet d'etendre un historique vers le passe sans retirer ce qui est deja
+    la : sur une serie 1min d'un an et demi, refetcher l'existant couterait
+    ~2 800 requetes et une vingtaine de minutes pour rien.
+    """
+    shards = list_shards(repo, asset, source, tf)
+    if not shards:
+        return None
+    rows = read_shard(shards[0])
+    return int(rows[0][0]) if rows else None
+
+
 # --------------------------------------------------------------------------
 # agregation (pour les TF derives : 1y)
 # --------------------------------------------------------------------------
