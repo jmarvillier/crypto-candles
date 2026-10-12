@@ -1,0 +1,90 @@
+{
+  "asset": "BCH",
+  "source": "perp",
+  "updated_at": "2026-10-12T12:02:41Z",
+  "columns": [
+    "ts",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol_base",
+    "vol_quote",
+    "src"
+  ],
+  "timeframes": {
+    "1h": {
+      "tf": "1h",
+      "n_rows": 59436,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1791802800000,
+      "last": "2026-10-12T11:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 11,
+      "gaps_sample": []
+    },
+    "4h": {
+      "tf": "4h",
+      "n_rows": 14859,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1791792000000,
+      "last": "2026-10-12T08:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 1,
+      "gaps_sample": []
+    },
+    "1d": {
+      "tf": "1d",
+      "n_rows": 2476,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1791676800000,
+      "last": "2026-10-11T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1w": {
+      "tf": "1w",
+      "n_rows": 353,
+      "first_ts": 1578268800000,
+      "first": "2020-01-06T00:00:00Z",
+      "last_ts": 1791158400000,
+      "last": "2026-10-05T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1mon": {
+      "tf": "1mon",
+      "n_rows": 81,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1788220800000,
+      "last": "2026-09-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1y": {
+      "tf": "1y",
+      "n_rows": 7,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1767225600000,
+      "last": "2026-01-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    }
+  },
+  "instId": "BCH-USDT-SWAP"
+}

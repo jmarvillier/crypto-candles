@@ -1,0 +1,90 @@
+{
+  "asset": "SOL",
+  "source": "perp",
+  "updated_at": "2026-10-12T11:47:55Z",
+  "columns": [
+    "ts",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol_base",
+    "vol_quote",
+    "src"
+  ],
+  "timeframes": {
+    "1h": {
+      "tf": "1h",
+      "n_rows": 50141,
+      "first_ts": 1611295200000,
+      "first": "2021-01-22T06:00:00Z",
+      "last_ts": 1791799200000,
+      "last": "2026-10-12T10:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 9,
+      "gaps_sample": []
+    },
+    "4h": {
+      "tf": "4h",
+      "n_rows": 12535,
+      "first_ts": 1611288000000,
+      "first": "2021-01-22T04:00:00Z",
+      "last_ts": 1791777600000,
+      "last": "2026-10-12T04:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 1,
+      "gaps_sample": []
+    },
+    "1d": {
+      "tf": "1d",
+      "n_rows": 2088,
+      "first_ts": 1611360000000,
+      "first": "2021-01-23T00:00:00Z",
+      "last_ts": 1791676800000,
+      "last": "2026-10-11T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1w": {
+      "tf": "1w",
+      "n_rows": 299,
+      "first_ts": 1610928000000,
+      "first": "2021-01-18T00:00:00Z",
+      "last_ts": 1791158400000,
+      "last": "2026-10-05T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1mon": {
+      "tf": "1mon",
+      "n_rows": 69,
+      "first_ts": 1609459200000,
+      "first": "2021-01-01T00:00:00Z",
+      "last_ts": 1788220800000,
+      "last": "2026-09-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1y": {
+      "tf": "1y",
+      "n_rows": 6,
+      "first_ts": 1609459200000,
+      "first": "2021-01-01T00:00:00Z",
+      "last_ts": 1767225600000,
+      "last": "2026-01-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    }
+  },
+  "instId": "SOL-USDT-SWAP"
+}

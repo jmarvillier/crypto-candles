@@ -1,0 +1,90 @@
+{
+  "asset": "APE",
+  "source": "xperp",
+  "updated_at": "2026-10-12T12:28:42Z",
+  "columns": [
+    "ts",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol_base",
+    "vol_quote",
+    "src"
+  ],
+  "timeframes": {
+    "1h": {
+      "tf": "1h",
+      "n_rows": 340,
+      "first_ts": 1790582400000,
+      "first": "2026-09-28T08:00:00Z",
+      "last_ts": 1791802800000,
+      "last": "2026-10-12T11:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 148,
+      "gaps_sample": []
+    },
+    "4h": {
+      "tf": "4h",
+      "n_rows": 85,
+      "first_ts": 1790582400000,
+      "first": "2026-09-28T08:00:00Z",
+      "last_ts": 1791792000000,
+      "last": "2026-10-12T08:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 8,
+      "gaps_sample": []
+    },
+    "1d": {
+      "tf": "1d",
+      "n_rows": 14,
+      "first_ts": 1790553600000,
+      "first": "2026-09-28T00:00:00Z",
+      "last_ts": 1791676800000,
+      "last": "2026-10-11T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1w": {
+      "tf": "1w",
+      "n_rows": 2,
+      "first_ts": 1790553600000,
+      "first": "2026-09-28T00:00:00Z",
+      "last_ts": 1791158400000,
+      "last": "2026-10-05T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1mon": {
+      "tf": "1mon",
+      "n_rows": 1,
+      "first_ts": 1788220800000,
+      "first": "2026-09-01T00:00:00Z",
+      "last_ts": 1788220800000,
+      "last": "2026-09-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1y": {
+      "tf": "1y",
+      "n_rows": 1,
+      "first_ts": 1767225600000,
+      "first": "2026-01-01T00:00:00Z",
+      "last_ts": 1767225600000,
+      "last": "2026-01-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    }
+  },
+  "instId": "APE-USD_UM_XPERP-311003"
+}

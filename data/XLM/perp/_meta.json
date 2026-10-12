@@ -1,0 +1,90 @@
+{
+  "asset": "XLM",
+  "source": "perp",
+  "updated_at": "2026-10-12T12:19:28Z",
+  "columns": [
+    "ts",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol_base",
+    "vol_quote",
+    "src"
+  ],
+  "timeframes": {
+    "1h": {
+      "tf": "1h",
+      "n_rows": 56289,
+      "first_ts": 1589166000000,
+      "first": "2020-05-11T03:00:00Z",
+      "last_ts": 1791802800000,
+      "last": "2026-10-12T11:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 513,
+      "gaps_sample": []
+    },
+    "4h": {
+      "tf": "4h",
+      "n_rows": 14073,
+      "first_ts": 1589155200000,
+      "first": "2020-05-11T00:00:00Z",
+      "last_ts": 1791792000000,
+      "last": "2026-10-12T08:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 27,
+      "gaps_sample": []
+    },
+    "1d": {
+      "tf": "1d",
+      "n_rows": 2344,
+      "first_ts": 1589241600000,
+      "first": "2020-05-12T00:00:00Z",
+      "last_ts": 1791676800000,
+      "last": "2026-10-11T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1w": {
+      "tf": "1w",
+      "n_rows": 335,
+      "first_ts": 1589155200000,
+      "first": "2020-05-11T00:00:00Z",
+      "last_ts": 1791158400000,
+      "last": "2026-10-05T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1mon": {
+      "tf": "1mon",
+      "n_rows": 77,
+      "first_ts": 1588291200000,
+      "first": "2020-05-01T00:00:00Z",
+      "last_ts": 1788220800000,
+      "last": "2026-09-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    },
+    "1y": {
+      "tf": "1y",
+      "n_rows": 7,
+      "first_ts": 1577836800000,
+      "first": "2020-01-01T00:00:00Z",
+      "last_ts": 1767225600000,
+      "last": "2026-01-01T00:00:00Z",
+      "n_gaps": 0,
+      "missing_candles": 0,
+      "n_zero_volume": 0,
+      "gaps_sample": []
+    }
+  },
+  "instId": "XLM-USDT-SWAP"
+}

@@ -1,4 +1,74 @@
 {
+  "AAVE": {
+    "asset": "AAVE",
+    "ct_val": "0.1",
+    "swap": "AAVE-USDT-SWAP",
+    "xperp": "AAVE-USD_UM_XPERP-310704",
+    "xperp_list_ms": 1782808200135
+  },
+  "ADA": {
+    "asset": "ADA",
+    "ct_val": "10",
+    "swap": "ADA-USDT-SWAP",
+    "xperp": "ADA-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775016325770
+  },
+  "APE": {
+    "asset": "APE",
+    "ct_val": "0.1",
+    "swap": "APE-USDT-SWAP",
+    "xperp": "APE-USD_UM_XPERP-311003",
+    "xperp_list_ms": 1790585100121
+  },
+  "APT": {
+    "asset": "APT",
+    "ct_val": "1",
+    "swap": "APT-USDT-SWAP",
+    "xperp": "APT-USD_UM_XPERP-310815",
+    "xperp_list_ms": 1786526100163
+  },
+  "ARB": {
+    "asset": "ARB",
+    "ct_val": "10",
+    "swap": "ARB-USDT-SWAP",
+    "xperp": "ARB-USD_UM_XPERP-310815",
+    "xperp_list_ms": 1786439700168
+  },
+  "ATOM": {
+    "asset": "ATOM",
+    "ct_val": "1",
+    "swap": "ATOM-USDT-SWAP",
+    "xperp": "ATOM-USD_UM_XPERP-310912",
+    "xperp_list_ms": 1789027200150
+  },
+  "AVAX": {
+    "asset": "AVAX",
+    "ct_val": "10",
+    "swap": "AVAX-USDT-SWAP",
+    "xperp": "AVAX-USD_UM_XPERP-310530",
+    "xperp_list_ms": 1779869700379
+  },
+  "BCH": {
+    "asset": "BCH",
+    "ct_val": "0.01",
+    "swap": "BCH-USDT-SWAP",
+    "xperp": "BCH-USD_UM_XPERP-310530",
+    "xperp_list_ms": 1779873300338
+  },
+  "BICO": {
+    "asset": "BICO",
+    "ct_val": "1",
+    "swap": "BICO-USDT-SWAP",
+    "xperp": "BICO-USD_UM_XPERP-310704",
+    "xperp_list_ms": 1782635400099
+  },
+  "BNB": {
+    "asset": "BNB",
+    "ct_val": "0.01",
+    "swap": "BNB-USDT-SWAP",
+    "xperp": "BNB-USD_UM_XPERP-310523",
+    "xperp_list_ms": 1779264900241
+  },
   "BTC": {
     "asset": "BTC",
     "ct_val": "0.0001",
@@ -6,11 +76,207 @@
     "xperp": "BTC-USD_UM_XPERP-310404",
     "xperp_list_ms": 1774845000428
   },
+  "CRV": {
+    "asset": "CRV",
+    "ct_val": "1",
+    "swap": "CRV-USDT-SWAP",
+    "xperp": "CRV-USD_UM_XPERP-310815",
+    "xperp_list_ms": 1786356900160
+  },
+  "DOGE": {
+    "asset": "DOGE",
+    "ct_val": "10",
+    "swap": "DOGE-USDT-SWAP",
+    "xperp": "DOGE-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775016600262
+  },
+  "DOT": {
+    "asset": "DOT",
+    "ct_val": "1",
+    "swap": "DOT-USDT-SWAP",
+    "xperp": "DOT-USD_UM_XPERP-310808",
+    "xperp_list_ms": 1786097700162
+  },
+  "DYDX": {
+    "asset": "DYDX",
+    "ct_val": "1",
+    "swap": "DYDX-USDT-SWAP",
+    "xperp": "DYDX-USD_UM_XPERP-310822",
+    "xperp_list_ms": 1786954500164
+  },
+  "ENA": {
+    "asset": "ENA",
+    "ct_val": "100",
+    "swap": "ENA-USDT-SWAP",
+    "xperp": "ENA-USD_UM_XPERP-310613",
+    "xperp_list_ms": 1781167500216
+  },
+  "ETC": {
+    "asset": "ETC",
+    "ct_val": "10",
+    "swap": "ETC-USDT-SWAP",
+    "xperp": "ETC-USD_UM_XPERP-310808",
+    "xperp_list_ms": 1786096800234
+  },
   "ETH": {
     "asset": "ETH",
     "ct_val": "0.001",
     "swap": "ETH-USDT-SWAP",
     "xperp": "ETH-USD_UM_XPERP-310404",
     "xperp_list_ms": 1775016000441
+  },
+  "FIL": {
+    "asset": "FIL",
+    "ct_val": "0.1",
+    "swap": "FIL-USDT-SWAP",
+    "xperp": "FIL-USD_UM_XPERP-310718",
+    "xperp_list_ms": 1783934100131
+  },
+  "HYPE": {
+    "asset": "HYPE",
+    "ct_val": "0.1",
+    "swap": "HYPE-USDT-SWAP",
+    "xperp": "HYPE-USD_UM_XPERP-310523",
+    "xperp_list_ms": 1779265800278
+  },
+  "ICP": {
+    "asset": "ICP",
+    "ct_val": "1",
+    "swap": "ICP-USDT-SWAP",
+    "xperp": "ICP-USD_UM_XPERP-310711",
+    "xperp_list_ms": 1783502100148
+  },
+  "INJ": {
+    "asset": "INJ",
+    "ct_val": "0.1",
+    "swap": "INJ-USDT-SWAP",
+    "xperp": "INJ-USD_UM_XPERP-310711",
+    "xperp_list_ms": 1783501201444
+  },
+  "LINK": {
+    "asset": "LINK",
+    "ct_val": "1",
+    "swap": "LINK-USDT-SWAP",
+    "xperp": "LINK-USD_UM_XPERP-310523",
+    "xperp_list_ms": 1779266700290
+  },
+  "LTC": {
+    "asset": "LTC",
+    "ct_val": "0.1",
+    "swap": "LTC-USDT-SWAP",
+    "xperp": "LTC-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1774845300250
+  },
+  "NEAR": {
+    "asset": "NEAR",
+    "ct_val": "1",
+    "swap": "NEAR-USDT-SWAP",
+    "xperp": "NEAR-USD_UM_XPERP-310613",
+    "xperp_list_ms": 1781166600234
+  },
+  "ONDO": {
+    "asset": "ONDO",
+    "ct_val": "10",
+    "swap": "ONDO-USDT-SWAP",
+    "xperp": "ONDO-USD_UM_XPERP-310620",
+    "xperp_list_ms": 1781684100312
+  },
+  "OP": {
+    "asset": "OP",
+    "ct_val": "1",
+    "swap": "OP-USDT-SWAP",
+    "xperp": "OP-USD_UM_XPERP-310815",
+    "xperp_list_ms": 1786440600154
+  },
+  "PEPE": {
+    "asset": "PEPE",
+    "ct_val": "1000000",
+    "swap": "PEPE-USDT-SWAP",
+    "xperp": "PEPE-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775016900335
+  },
+  "SAND": {
+    "asset": "SAND",
+    "ct_val": "10",
+    "swap": "SAND-USDT-SWAP",
+    "xperp": "SAND-USD_UM_XPERP-311010",
+    "xperp_list_ms": 1791363600167
+  },
+  "SHIB": {
+    "asset": "SHIB",
+    "ct_val": "1000000",
+    "swap": "SHIB-USDT-SWAP",
+    "xperp": "SHIB-USD_UM_XPERP-310801",
+    "xperp_list_ms": 1785311854355
+  },
+  "SOL": {
+    "asset": "SOL",
+    "ct_val": "0.01",
+    "swap": "SOL-USDT-SWAP",
+    "xperp": "SOL-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775017500279
+  },
+  "SUI": {
+    "asset": "SUI",
+    "ct_val": "1",
+    "swap": "SUI-USDT-SWAP",
+    "xperp": "SUI-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775017800287
+  },
+  "TAO": {
+    "asset": "TAO",
+    "ct_val": "0.01",
+    "swap": "TAO-USDT-SWAP",
+    "xperp": "TAO-USD_UM_XPERP-310523",
+    "xperp_list_ms": 1779264000414
+  },
+  "TIA": {
+    "asset": "TIA",
+    "ct_val": "1",
+    "swap": "TIA-USDT-SWAP",
+    "xperp": "TIA-USD_UM_XPERP-310905",
+    "xperp_list_ms": 1788336900109
+  },
+  "TRX": {
+    "asset": "TRX",
+    "ct_val": "10",
+    "swap": "TRX-USDT-SWAP",
+    "xperp": "TRX-USD_UM_XPERP-310523",
+    "xperp_list_ms": 1779267600284
+  },
+  "UNI": {
+    "asset": "UNI",
+    "ct_val": "1",
+    "swap": "UNI-USDT-SWAP",
+    "xperp": "UNI-USD_UM_XPERP-310718",
+    "xperp_list_ms": 1783933200349
+  },
+  "WIF": {
+    "asset": "WIF",
+    "ct_val": "1",
+    "swap": "WIF-USDT-SWAP",
+    "xperp": "WIF-USD_UM_XPERP-310815",
+    "xperp_list_ms": 1786527000162
+  },
+  "WLD": {
+    "asset": "WLD",
+    "ct_val": "10",
+    "swap": "WLD-USDT-SWAP",
+    "xperp": "WLD-USD_UM_XPERP-310613",
+    "xperp_list_ms": 1781165700227
+  },
+  "XLM": {
+    "asset": "XLM",
+    "ct_val": "100",
+    "swap": "XLM-USDT-SWAP",
+    "xperp": "XLM-USD_UM_XPERP-310704",
+    "xperp_list_ms": 1783067400217
+  },
+  "XRP": {
+    "asset": "XRP",
+    "ct_val": "1",
+    "swap": "XRP-USDT-SWAP",
+    "xperp": "XRP-USD_UM_XPERP-310404",
+    "xperp_list_ms": 1775018100295
   }
 }
