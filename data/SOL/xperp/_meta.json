@@ -1,7 +1,7 @@
 {
   "asset": "SOL",
   "source": "xperp",
-  "updated_at": "2026-10-12T11:46:17Z",
+  "updated_at": "2026-10-13T18:14:03Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 4663,
+      "n_rows": 4694,
       "first_ts": 1775016000000,
       "first": "2026-04-01T04:00:00Z",
-      "last_ts": 1791799200000,
-      "last": "2026-10-12T10:00:00Z",
+      "last_ts": 1791910800000,
+      "last": "2026-10-13T17:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 304,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 1165,
+      "n_rows": 1173,
       "first_ts": 1775016000000,
       "first": "2026-04-01T04:00:00Z",
-      "last_ts": 1791777600000,
-      "last": "2026-10-12T04:00:00Z",
+      "last_ts": 1791892800000,
+      "last": "2026-10-13T12:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 60,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 194,
+      "n_rows": 195,
       "first_ts": 1775001600000,
       "first": "2026-04-01T00:00:00Z",
-      "last_ts": 1791676800000,
-      "last": "2026-10-11T00:00:00Z",
+      "last_ts": 1791763200000,
+      "last": "2026-10-12T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 3,

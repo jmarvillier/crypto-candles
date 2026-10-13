@@ -1,7 +1,7 @@
 {
   "asset": "APE",
   "source": "xperp",
-  "updated_at": "2026-10-12T12:28:42Z",
+  "updated_at": "2026-10-13T18:09:54Z",
   "columns": [
     "ts",
     "open",
@@ -15,23 +15,29 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 340,
+      "n_rows": 368,
       "first_ts": 1790582400000,
       "first": "2026-09-28T08:00:00Z",
-      "last_ts": 1791802800000,
-      "last": "2026-10-12T11:00:00Z",
-      "n_gaps": 0,
-      "missing_candles": 0,
-      "n_zero_volume": 148,
-      "gaps_sample": []
+      "last_ts": 1791910800000,
+      "last": "2026-10-13T17:00:00Z",
+      "n_gaps": 1,
+      "missing_candles": 2,
+      "n_zero_volume": 156,
+      "gaps_sample": [
+        {
+          "after": "2026-10-12T11:00:00Z",
+          "before": "2026-10-12T14:00:00Z",
+          "missing": 2
+        }
+      ]
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 85,
+      "n_rows": 92,
       "first_ts": 1790582400000,
       "first": "2026-09-28T08:00:00Z",
-      "last_ts": 1791792000000,
-      "last": "2026-10-12T08:00:00Z",
+      "last_ts": 1791892800000,
+      "last": "2026-10-13T12:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 8,
@@ -39,11 +45,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 14,
+      "n_rows": 15,
       "first_ts": 1790553600000,
       "first": "2026-09-28T00:00:00Z",
-      "last_ts": 1791676800000,
-      "last": "2026-10-11T00:00:00Z",
+      "last_ts": 1791763200000,
+      "last": "2026-10-12T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,

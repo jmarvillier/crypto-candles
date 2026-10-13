@@ -1,7 +1,7 @@
 {
   "asset": "AVAX",
   "source": "xperp",
-  "updated_at": "2026-10-12T11:54:41Z",
+  "updated_at": "2026-10-13T18:10:12Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 3315,
+      "n_rows": 3346,
       "first_ts": 1779868800000,
       "first": "2026-05-27T08:00:00Z",
-      "last_ts": 1791799200000,
-      "last": "2026-10-12T10:00:00Z",
+      "last_ts": 1791910800000,
+      "last": "2026-10-13T17:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 213,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 828,
+      "n_rows": 836,
       "first_ts": 1779868800000,
       "first": "2026-05-27T08:00:00Z",
-      "last_ts": 1791777600000,
-      "last": "2026-10-12T04:00:00Z",
+      "last_ts": 1791892800000,
+      "last": "2026-10-13T12:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 18,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 138,
+      "n_rows": 139,
       "first_ts": 1779840000000,
       "first": "2026-05-27T00:00:00Z",
-      "last_ts": 1791676800000,
-      "last": "2026-10-11T00:00:00Z",
+      "last_ts": 1791763200000,
+      "last": "2026-10-12T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,

@@ -1,7 +1,7 @@
 {
   "asset": "LINK",
   "source": "xperp",
-  "updated_at": "2026-10-12T11:52:32Z",
+  "updated_at": "2026-10-13T18:13:28Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 3481,
+      "n_rows": 3512,
       "first_ts": 1779271200000,
       "first": "2026-05-20T10:00:00Z",
-      "last_ts": 1791799200000,
-      "last": "2026-10-12T10:00:00Z",
+      "last_ts": 1791910800000,
+      "last": "2026-10-13T17:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 93,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 870,
+      "n_rows": 878,
       "first_ts": 1779264000000,
       "first": "2026-05-20T08:00:00Z",
-      "last_ts": 1791777600000,
-      "last": "2026-10-12T04:00:00Z",
+      "last_ts": 1791892800000,
+      "last": "2026-10-13T12:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 2,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 145,
+      "n_rows": 146,
       "first_ts": 1779235200000,
       "first": "2026-05-20T00:00:00Z",
-      "last_ts": 1791676800000,
-      "last": "2026-10-11T00:00:00Z",
+      "last_ts": 1791763200000,
+      "last": "2026-10-12T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,

@@ -1,7 +1,7 @@
 {
   "asset": "XRP",
   "source": "perp",
-  "updated_at": "2026-10-12T11:45:57Z",
+  "updated_at": "2026-10-13T18:14:46Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 59435,
+      "n_rows": 59466,
       "first_ts": 1577836800000,
       "first": "2020-01-01T00:00:00Z",
-      "last_ts": 1791799200000,
-      "last": "2026-10-12T10:00:00Z",
+      "last_ts": 1791910800000,
+      "last": "2026-10-13T17:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 9,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 14858,
+      "n_rows": 14866,
       "first_ts": 1577836800000,
       "first": "2020-01-01T00:00:00Z",
-      "last_ts": 1791777600000,
-      "last": "2026-10-12T04:00:00Z",
+      "last_ts": 1791892800000,
+      "last": "2026-10-13T12:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 1,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 2476,
+      "n_rows": 2477,
       "first_ts": 1577836800000,
       "first": "2020-01-01T00:00:00Z",
-      "last_ts": 1791676800000,
-      "last": "2026-10-11T00:00:00Z",
+      "last_ts": 1791763200000,
+      "last": "2026-10-12T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,
