@@ -34,9 +34,10 @@ CANDIDAT isolé.
 |---|---|---|---|---|
 | 2026-10-13 | risk-anomalies-v1 | 9 | 9 CANDIDAT | Redondant avec `vol_30` (corr. de rang 0,49 / 0,89 / 0,81). Une fois vol_30 retirée, aucun IC partiel stable IS+OOS. Le bêta est suspect (IC −0,16 quand BTC monte, −0,05 quand il baisse). Confirme la low-vol des alts : tient sans les listings post-2022, quel que soit le sens de BTC. Spread inversé en 2021 (saison des alts), faible en 2026. |
 | 2026-10-13 | btc-leadlag-v1 | 6 | 6 PISTE | Information réelle (IC OOS +0,025 à +0,03, t 14–19) mais ≈ 1 bp/h de spread contre ~30 bps de coût. IC divisé par 3 depuis 2021. **Clos.** |
+| 2026-10-13 | backtest lowvol-ls-v1 (hors registre, `research/backtest/`) | 1 backtest, 7 gates | NO-GO 0/7 | Long low-vol / short high-vol couvert bêta : −19 %/an, Sharpe −0,21, 2021 −81 %, négatif avant coûts. Spread hebdo +61 bps en log mais −61 bps en simple : l'edge du lab venait de la cible log (traînée de volatilité) et du piège rang ≠ moyenne. Piste low-vol **close** ; CANDIDAT de risk-anomalies-v1 non confirmés (même biais). |
 
 ## Suite ouverte
 
-Backtest long/short pré-enregistré de la low-vol des alts (crypto-backtest-forge) : funding des
-shorts inclus, rebalancement hebdomadaire, 2021 comme stress test, gate dédiée à la perte en
-saison des alts.
+Aucune piste de backtest ouverte. Correctif du moteur edge-lab à faire avant tout nouveau run :
+calculer spread Q5−Q1 et gate « net de coûts » (G7) en rendement SIMPLE, garder l'IC de rang
+pour le pouvoir prédictif (cf. research/backtest/lowvol-ls-v1/RESULTATS.md).

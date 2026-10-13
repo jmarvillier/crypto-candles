@@ -1,5 +1,5 @@
 # lowvol-ls-v1 — pré-enregistrement du backtest
-Figé le 2026-10-13, AVANT tout run. Statut : en attente du GO de Jérémie.
+Figé le 2026-10-13, AVANT tout run (commit 46b44b8). GO de Jérémie reçu le 2026-10-13 21:38 avant tout run, protocole inchangé.
 Origine : « Suite ouverte » du journal edge-lab (vol_30 GO au factor lab du 12/10, confirmé par risk-anomalies-v1).
 
 ## Avertissement de départ

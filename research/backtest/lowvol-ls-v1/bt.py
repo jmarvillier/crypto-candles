@@ -163,13 +163,13 @@ def main():
             "rotation_hebdo_moy": df["rotation"].mean(), "data_sha": open(os.path.join(os.path.dirname(__file__), "DATA_SHA")).read().strip()}
     json.dump(meta, open(os.path.join(OUT, "meta.json"), "w"), indent=2, ensure_ascii=False)
     with pd.ExcelWriter(os.path.join(OUT, "lowvol-ls-v1.xlsx")) as xw:
-        pd.DataFrame([{"gate": k, "ok": "OUI" if v else "NON"} for k, v in G.items()] + [{"gate": "VERDICT", "ok": verdict}]).to_excel(xw, "Verdict", index=False)
-        S.round(3).to_excel(xw, "Synthèse", index=False)
-        (Y.drop(columns="semaines") * 100).round(2).assign(semaines=Y["semaines"]).to_excel(xw, "Par année")
+        pd.DataFrame([{"gate": k, "ok": "OUI" if v else "NON"} for k, v in G.items()] + [{"gate": "VERDICT", "ok": verdict}]).to_excel(xw, sheet_name="Verdict", index=False)
+        S.round(3).to_excel(xw, sheet_name="Synthèse", index=False)
+        (Y.drop(columns="semaines") * 100).round(2).assign(semaines=Y["semaines"]).to_excel(xw, sheet_name="Par année")
         q = df.groupby(df.index.to_period("Q")).agg(net=("net", lambda x: 100 * ((1 + x).prod() - 1)))
-        q.index = q.index.astype(str); q.round(2).to_excel(xw, "Par trimestre")
-        df.assign(equity_net=(1 + df["net"]).cumprod()).to_excel(xw, "Semaines")
-        pd.DataFrame([meta]).drop(columns=["gates"]).T.to_excel(xw, "Méta", header=False)
+        q.index = q.index.astype(str); q.round(2).to_excel(xw, sheet_name="Par trimestre")
+        df.assign(equity_net=(1 + df["net"]).cumprod()).to_excel(xw, sheet_name="Semaines")
+        pd.DataFrame([meta]).drop(columns=["gates"]).T.to_excel(xw, sheet_name="Méta", header=False)
     print(S.round(3).to_string(index=False)); print((Y.drop(columns="semaines") * 100).round(2).to_string()); print(json.dumps(meta, indent=1, ensure_ascii=False))
 
 

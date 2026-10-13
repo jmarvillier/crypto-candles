@@ -1,0 +1,18 @@
+{
+  "verdict": "NO-GO",
+  "gates": {
+    "G1 Sharpe>=0.5": false,
+    "G2 t_NW>=2": false,
+    "G3 IS>0 et OOS>0": false,
+    "G4 annees>=4/6": false,
+    "G5 2021>=-15% et DD<=25%": false,
+    "G6 STRESS annuel>0": false,
+    "G7 couts<50% brut": false
+  },
+  "annees_positives": 3,
+  "net_2021_%": -81.5230470449348,
+  "part_couts_%": Infinity,
+  "funding_breakeven_annuel_%": -18.732353760152666,
+  "rotation_hebdo_moy": 0.4792508424174765,
+  "data_sha": "76addfaecbde43d364c13a7e7f7252aa3e6e84ca"
+}
