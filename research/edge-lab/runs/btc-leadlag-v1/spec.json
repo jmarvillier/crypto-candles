@@ -1,0 +1,19 @@
+{
+  "name": "btc-leadlag-v1",
+  "type": "feature",
+  "expected_sign": 1,
+  "assets": "all",
+  "exclude": [],
+  "source": "perp",
+  "tf": "1h",
+  "horizons": [1, 2, 4],
+  "start": "2021-01-01",
+  "is_end": "2024-06-30",
+  "oos_start": "2024-07-01",
+  "end": null,
+  "target": "res",
+  "tests": ["xs"],
+  "beta_window": 720,
+  "cost_roundtrip": 0.0015,
+  "ledger": "/home/claude/crypto-candles/research/edge-lab/ledger.csv"
+}

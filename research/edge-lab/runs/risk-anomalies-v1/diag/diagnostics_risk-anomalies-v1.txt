@@ -1,0 +1,32 @@
+== corrélation de rang moyenne (cross-section)
+              beta_btc_90  idio_vol_30  max_ret_30  vol_30
+beta_btc_90         1.00         0.31        0.35    0.49
+idio_vol_30         0.31         1.00        0.74    0.89
+max_ret_30          0.35         0.74        1.00    0.81
+vol_30              0.49         0.89        0.81    1.00
+
+== h=10 j, OOS | IC brut vs IC partiel (vol_30 retirée)
+beta_btc_90  brut: IC -0.1101  t -4.29  n 824 | partiel: IC -0.0375  t -1.88  n 824 | partiel IS: IC -0.0259  t -1.53  n 1277
+idio_vol_30  brut: IC -0.1336  t -5.92  n 824 | partiel: IC -0.0081  t -0.52  n 824 | partiel IS: IC -0.0463  t -3.19  n 1277
+max_ret_30   brut: IC -0.1208  t -6.56  n 824 | partiel: IC -0.0311  t -2.05  n 824 | partiel IS: IC -0.0037  t -0.30  n 1277
+vol_30       brut: IC -0.1413  t -5.89  n 824
+vol_30|idio  partiel: IC -0.0742  t -4.25  n 824
+
+== OOS : IC selon le signe du rendement BTC à 10 j
+beta_btc_90  BTC↑ -0.1635 (n 439)   BTC↓ -0.0493 (n 385)
+idio_vol_30  BTC↑ -0.1243 (n 439)   BTC↓ -0.1443 (n 385)
+max_ret_30   BTC↑ -0.1287 (n 439)   BTC↓ -0.1117 (n 385)
+vol_30       BTC↑ -0.1382 (n 439)   BTC↓ -0.1449 (n 385)
+
+== OOS, 28 alts listées avant 2023 seulement (exclues : ['ARB', 'ENA', 'HYPE', 'INJ', 'ONDO', 'PEPE', 'SUI', 'TAO', 'TIA', 'WIF', 'WLD'])
+beta_btc_90  IC -0.1102  t -4.52  n 824
+idio_vol_30  IC -0.1462  t -6.40  n 824
+max_ret_30   IC -0.1340  t -7.72  n 824
+vol_30       IC -0.1520  t -6.94  n 824
+
+== Q1−Q5 (bas score − haut score) rendement résiduel moyen à 10 j, par année
+ts           2020  2021  2022  2023  2024  2025  2026
+beta_btc_90  3.15  2.96  0.01  2.93  2.56  2.96  0.30
+idio_vol_30  3.97 -2.88  2.41  2.22  2.43  3.01  0.25
+max_ret_30   2.71 -1.98  1.43  1.99  2.23  2.81  2.41
+vol_30       3.03 -2.67  1.49  2.29  2.51  2.99  0.91

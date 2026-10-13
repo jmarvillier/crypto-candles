@@ -1,0 +1,108 @@
+{
+ "spec": {
+  "name": "btc-leadlag-v1",
+  "type": "feature",
+  "expected_sign": 1,
+  "assets": "all",
+  "exclude": [],
+  "source": "perp",
+  "tf": "1h",
+  "horizons": [
+   1,
+   2,
+   4
+  ],
+  "start": "2021-01-01",
+  "is_end": "2024-06-30",
+  "oos_start": "2024-07-01",
+  "end": null,
+  "target": "res",
+  "tests": [
+   "xs"
+  ],
+  "cost_roundtrip": 0.0015,
+  "beta_window": 720,
+  "vol_window": 30,
+  "min_listing_bars": 30,
+  "min_cross_section": 10,
+  "z_min_periods": 60,
+  "event_cooldown": "h",
+  "min_events_oos": 50,
+  "min_events_year": 20,
+  "n_permutations": 200,
+  "extra_csv": null,
+  "ledger": "/home/claude/edge-lab/ledger.csv",
+  "seed": 7,
+  "gates": {
+   "min_abs_ic": 0.02,
+   "min_abs_t": 2.0,
+   "fdr_q": 0.1,
+   "year_share": 0.6666666666666666,
+   "perm_p": 0.05
+  }
+ },
+ "periods": {
+  "IS": [
+   "2021-01-01",
+   "2024-06-30"
+  ],
+  "OOS": [
+   "2024-07-01",
+   "2026-10-13"
+  ]
+ },
+ "run_at": "2026-10-13T21:23:48",
+ "n_tests": 6,
+ "verdicts": {
+  "PISTE": 6
+ },
+ "lookahead": "OK",
+ "lookahead_fails": [],
+ "features": [
+  "gap_btc_1h",
+  "gap_btc_3h"
+ ],
+ "actifs": 40,
+ "barres_signal_par_actif": {
+  "AAVE": 50694,
+  "ADA": 55956,
+  "APE": 39601,
+  "APT": 34429,
+  "ARB": 30705,
+  "ATOM": 55258,
+  "AVAX": 52567,
+  "BCH": 58956,
+  "BICO": 41950,
+  "BNB": 32873,
+  "BTC": 58958,
+  "CRV": 53021,
+  "DOGE": 54370,
+  "DOT": 53264,
+  "DYDX": 44158,
+  "ENA": 8896,
+  "ETC": 58956,
+  "ETH": 58957,
+  "FIL": 53873,
+  "HYPE": 13888,
+  "ICP": 46974,
+  "INJ": 24660,
+  "LINK": 57318,
+  "LTC": 58956,
+  "NEAR": 50425,
+  "ONDO": 18661,
+  "OP": 37787,
+  "PEPE": 29732,
+  "SAND": 47981,
+  "SHIB": 47096,
+  "SOL": 49664,
+  "SUI": 29684,
+  "TAO": 17586,
+  "TIA": 25373,
+  "TRX": 58941,
+  "UNI": 52713,
+  "WIF": 21374,
+  "WLD": 27756,
+  "XLM": 55307,
+  "XRP": 58958
+ }
+}
