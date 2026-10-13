@@ -36,8 +36,18 @@ CANDIDAT isolé.
 | 2026-10-13 | btc-leadlag-v1 | 6 | 6 PISTE | Information réelle (IC OOS +0,025 à +0,03, t 14–19) mais ≈ 1 bp/h de spread contre ~30 bps de coût. IC divisé par 3 depuis 2021. **Clos.** |
 | 2026-10-13 | backtest lowvol-ls-v1 (hors registre, `research/backtest/`) | 1 backtest, 7 gates | NO-GO 0/7 | Long low-vol / short high-vol couvert bêta : −19 %/an, Sharpe −0,21, 2021 −81 %, négatif avant coûts. Spread hebdo +61 bps en log mais −61 bps en simple : l'edge du lab venait de la cible log (traînée de volatilité) et du piège rang ≠ moyenne. Piste low-vol **close** ; CANDIDAT de risk-anomalies-v1 non confirmés (même biais). |
 
+## Moteur 1.2 (2026-10-13) et relecture des verdicts antérieurs
+
+Le moteur ≤ 1.1 mesurait spread, net de coûts et années en rendement LOG et ne jugeait le net
+qu'en OOS. Depuis 1.2 : spread / G6 / G7 / événements en rendement simple, G7 en IS ET OOS,
+G6 sur le spread simple annuel. Relecture DESCRIPTIVE (registre inchangé, aucune ligne ajoutée) :
+- vol_30 (h 5/10/20) : CANDIDAT → **PISTE** (cohérent avec le NO-GO du backtest lowvol-ls-v1) ;
+- risk-anomalies-v1 : idio_vol_30 et max_ret_30 → **PISTE** ; beta_btc_90 reste CANDIDAT
+  (spread simple du bon signe en IS et OOS, 4/6 années) — à lire avec ~105 tests au total et sa
+  redondance partielle avec vol_30 ;
+- btc-leadlag-v1 : inchangé (PISTE).
+
 ## Suite ouverte
 
-Aucune piste de backtest ouverte. Correctif du moteur edge-lab à faire avant tout nouveau run :
-calculer spread Q5−Q1 et gate « net de coûts » (G7) en rendement SIMPLE, garder l'IC de rang
-pour le pouvoir prédictif (cf. research/backtest/lowvol-ls-v1/RESULTATS.md).
+Aucune piste de backtest ouverte. Seul CANDIDAT survivant au moteur 1.2 : beta_btc_90 (faible
+conviction, cf. ci-dessus). Tout nouveau run se fait avec le moteur ≥ 1.2.
