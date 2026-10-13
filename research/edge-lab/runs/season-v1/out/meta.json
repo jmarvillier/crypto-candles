@@ -1,0 +1,109 @@
+{
+ "spec": {
+  "name": "season-v1",
+  "type": "event",
+  "expected_sign": 1,
+  "assets": "all",
+  "exclude": [],
+  "source": "perp",
+  "tf": "1d",
+  "horizons": [
+   1,
+   2,
+   4
+  ],
+  "start": "2021-01-01",
+  "is_end": "2024-06-30",
+  "oos_start": "2024-07-01",
+  "end": null,
+  "target": "raw",
+  "tests": null,
+  "cost_roundtrip": 0.0015,
+  "beta_window": 90,
+  "vol_window": 30,
+  "min_listing_bars": 30,
+  "min_cross_section": 10,
+  "z_min_periods": 60,
+  "event_cooldown": "h",
+  "min_events_oos": 50,
+  "min_events_year": 20,
+  "n_permutations": 200,
+  "extra_csv": null,
+  "ledger": "/home/claude/crypto-candles/research/edge-lab/ledger.csv",
+  "seed": 7,
+  "gates": {
+   "min_abs_ic": 0.02,
+   "min_abs_t": 2.0,
+   "fdr_q": 0.1,
+   "year_share": 0.6666666666666666,
+   "perm_p": 0.05
+  }
+ },
+ "periods": {
+  "IS": [
+   "2021-01-01",
+   "2024-06-30"
+  ],
+  "OOS": [
+   "2024-07-01",
+   "2026-10-13"
+  ]
+ },
+ "run_at": "2026-10-13T21:48:51",
+ "data_sha": "d0d9c61c6fd44bbc98ba801c03917ad4f62fd108",
+ "engine_version": "1.2",
+ "n_tests": 9,
+ "verdicts": {
+  "REJET\u00c9": 9
+ },
+ "lookahead": "OK",
+ "lookahead_fails": [],
+ "features": [
+  "mon_long",
+  "tom_long",
+  "wkend_short"
+ ],
+ "actifs": 40,
+ "barres_signal_par_actif": {
+  "AAVE": 2132,
+  "ADA": 2359,
+  "APE": 1671,
+  "APT": 1455,
+  "ARB": 1300,
+  "ATOM": 2350,
+  "AVAX": 2210,
+  "BCH": 2477,
+  "BICO": 1769,
+  "BNB": 1390,
+  "BTC": 2477,
+  "CRV": 2229,
+  "DOGE": 2285,
+  "DOT": 2239,
+  "DYDX": 1861,
+  "ENA": 391,
+  "ETC": 2477,
+  "ETH": 2477,
+  "FIL": 2274,
+  "HYPE": 599,
+  "ICP": 1977,
+  "INJ": 1048,
+  "LINK": 2409,
+  "LTC": 2477,
+  "NEAR": 2121,
+  "ONDO": 798,
+  "OP": 1595,
+  "PEPE": 1259,
+  "SAND": 2019,
+  "SHIB": 1982,
+  "SOL": 2089,
+  "SUI": 1257,
+  "TAO": 753,
+  "TIA": 1078,
+  "TRX": 2477,
+  "UNI": 2216,
+  "WIF": 911,
+  "WLD": 1177,
+  "XLM": 2345,
+  "XRP": 2477
+ }
+}

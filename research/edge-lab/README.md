@@ -35,6 +35,7 @@ CANDIDAT isolé.
 | 2026-10-13 | risk-anomalies-v1 | 9 | 9 CANDIDAT | Redondant avec `vol_30` (corr. de rang 0,49 / 0,89 / 0,81). Une fois vol_30 retirée, aucun IC partiel stable IS+OOS. Le bêta est suspect (IC −0,16 quand BTC monte, −0,05 quand il baisse). Confirme la low-vol des alts : tient sans les listings post-2022, quel que soit le sens de BTC. Spread inversé en 2021 (saison des alts), faible en 2026. |
 | 2026-10-13 | btc-leadlag-v1 | 6 | 6 PISTE | Information réelle (IC OOS +0,025 à +0,03, t 14–19) mais ≈ 1 bp/h de spread contre ~30 bps de coût. IC divisé par 3 depuis 2021. **Clos.** |
 | 2026-10-13 | backtest lowvol-ls-v1 (hors registre, `research/backtest/`) | 1 backtest, 7 gates | NO-GO 0/7 | Long low-vol / short high-vol couvert bêta : −19 %/an, Sharpe −0,21, 2021 −81 %, négatif avant coûts. Spread hebdo +61 bps en log mais −61 bps en simple : l'edge du lab venait de la cible log (traînée de volatilité) et du piège rang ≠ moyenne. Piste low-vol **close** ; CANDIDAT de risk-anomalies-v1 non confirmés (même biais). |
+| 2026-10-13 | season-v1 | 9 | 9 REJETÉ | Saisonnalités calendaires daily, 40 perps, cible brute. Lundi long : nul (OOS +2 bps, p_perm 0,54). Turn-of-month long : très bon en IS (+1,9 % sur 4 j) mais négatif en OOS (−0,45 % à −1,45 %), 27 dates OOS seulement (t NW non calculable). Week-end short : le samedi monte plutôt (−41 bps pour le short, p_perm 1,0) ; seul h4 bat le hasard (p 0,005) pour 6 bps net, t 0,3 : bruit. Famille « saisonnalité daily » **close** ; une version intraday 1h buterait sur le plancher de coûts. |
 
 ## Moteur 1.2 (2026-10-13) et relecture des verdicts antérieurs
 
@@ -51,3 +52,7 @@ G6 sur le spread simple annuel. Relecture DESCRIPTIVE (registre inchangé, aucun
 
 Aucune piste de backtest ouverte. Seul CANDIDAT survivant au moteur 1.2 : beta_btc_90 (faible
 conviction, cf. ci-dessus). Tout nouveau run se fait avec le moteur ≥ 1.2.
+Familles closes sur OHLCV : tendance/momentum, retournement, volatilité/bêta/MAX, lead-lag BTC,
+saisonnalité daily. Familles proposées non lancées : retournement 1 j conditionné au volume
+(Campbell-Grossman-Wang), ancrage au plus haut 365 j. Décompte : ~114 tests (24 au registre +
+~90 antérieurs).
