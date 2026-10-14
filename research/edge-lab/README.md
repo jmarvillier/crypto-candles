@@ -36,6 +36,7 @@ CANDIDAT isolé.
 | 2026-10-13 | btc-leadlag-v1 | 6 | 6 PISTE | Information réelle (IC OOS +0,025 à +0,03, t 14–19) mais ≈ 1 bp/h de spread contre ~30 bps de coût. IC divisé par 3 depuis 2021. **Clos.** |
 | 2026-10-13 | backtest lowvol-ls-v1 (hors registre, `research/backtest/`) | 1 backtest, 7 gates | NO-GO 0/7 | Long low-vol / short high-vol couvert bêta : −19 %/an, Sharpe −0,21, 2021 −81 %, négatif avant coûts. Spread hebdo +61 bps en log mais −61 bps en simple : l'edge du lab venait de la cible log (traînée de volatilité) et du piège rang ≠ moyenne. Piste low-vol **close** ; CANDIDAT de risk-anomalies-v1 non confirmés (même biais). |
 | 2026-10-13 | season-v1 | 9 | 9 REJETÉ | Saisonnalités calendaires daily, 40 perps, cible brute. Lundi long : nul (OOS +2 bps, p_perm 0,54). Turn-of-month long : très bon en IS (+1,9 % sur 4 j) mais négatif en OOS (−0,45 % à −1,45 %), 27 dates OOS seulement (t NW non calculable). Week-end short : le samedi monte plutôt (−41 bps pour le short, p_perm 1,0) ; seul h4 bat le hasard (p 0,005) pour 6 bps net, t 0,3 : bruit. Famille « saisonnalité daily » **close** ; une version intraday 1h buterait sur le plancher de coûts. |
+| 2026-10-14 | wm-neckline-v1 | 6 | 6 REJETÉ | Figures W / M daily mécaniques (pivots K=5, creux/sommets à ±3 %, hauteur ≥ 5 %, cassure du cou en clôture), 40 perps, cible brute, h 5/10/20. **W long** : fort en IS et meilleur que le hasard (h20 +20,7 %, p_perm 0,005, porté par 2021 +49 %) mais effondré en OOS (h20 +2,0 % vs +0,5 % au hasard, p_perm 0,29 ; 2025 négatif). **M short** : du mauvais côté en IS comme en OOS (h10 −2,7 %, h20 −3,2 %) — après un M cassé le prix a plutôt monté, sans que ce soit significatif. Échantillon mince (~60 événements par période, ~45 dates). Famille « doubles creux / sommets daily » **close** : pas d'appui pour une grille directionnelle. |
 
 ## Moteur 1.2 (2026-10-13) et relecture des verdicts antérieurs
 
@@ -53,6 +54,6 @@ G6 sur le spread simple annuel. Relecture DESCRIPTIVE (registre inchangé, aucun
 Aucune piste de backtest ouverte. Seul CANDIDAT survivant au moteur 1.2 : beta_btc_90 (faible
 conviction, cf. ci-dessus). Tout nouveau run se fait avec le moteur ≥ 1.2.
 Familles closes sur OHLCV : tendance/momentum, retournement, volatilité/bêta/MAX, lead-lag BTC,
-saisonnalité daily. Familles proposées non lancées : retournement 1 j conditionné au volume
-(Campbell-Grossman-Wang), ancrage au plus haut 365 j. Décompte : ~114 tests (24 au registre +
+saisonnalité daily, figures W/M daily. Familles proposées non lancées : retournement 1 j conditionné au volume
+(Campbell-Grossman-Wang), ancrage au plus haut 365 j. Décompte : ~120 tests (30 au registre +
 ~90 antérieurs).

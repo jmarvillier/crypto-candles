@@ -1,0 +1,16 @@
+{
+  "name": "wm-neckline-v1",
+  "type": "event",
+  "assets": "all",
+  "exclude": [],
+  "source": "perp",
+  "tf": "1d",
+  "horizons": [5, 10, 20],
+  "start": "2021-01-01",
+  "is_end": "2024-06-30",
+  "oos_start": "2024-07-01",
+  "end": null,
+  "target": "raw",
+  "cost_roundtrip": 0.0015,
+  "ledger": "repo"
+}
