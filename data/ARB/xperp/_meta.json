@@ -1,7 +1,7 @@
 {
   "asset": "ARB",
   "source": "xperp",
-  "updated_at": "2026-10-13T18:10:04Z",
+  "updated_at": "2026-10-14T11:21:18Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 1521,
+      "n_rows": 1538,
       "first_ts": 1786438800000,
       "first": "2026-08-11T09:00:00Z",
-      "last_ts": 1791910800000,
-      "last": "2026-10-13T17:00:00Z",
+      "last_ts": 1791972000000,
+      "last": "2026-10-14T10:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 133,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 380,
+      "n_rows": 384,
       "first_ts": 1786435200000,
       "first": "2026-08-11T08:00:00Z",
-      "last_ts": 1791892800000,
-      "last": "2026-10-13T12:00:00Z",
+      "last_ts": 1791950400000,
+      "last": "2026-10-14T04:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 7,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 63,
+      "n_rows": 64,
       "first_ts": 1786406400000,
       "first": "2026-08-11T00:00:00Z",
-      "last_ts": 1791763200000,
-      "last": "2026-10-12T00:00:00Z",
+      "last_ts": 1791849600000,
+      "last": "2026-10-13T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,

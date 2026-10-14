@@ -1,7 +1,7 @@
 {
   "asset": "INJ",
   "source": "perp",
-  "updated_at": "2026-10-13T18:13:25Z",
+  "updated_at": "2026-10-14T11:23:53Z",
   "columns": [
     "ts",
     "open",
@@ -15,11 +15,11 @@
   "timeframes": {
     "1h": {
       "tf": "1h",
-      "n_rows": 25159,
+      "n_rows": 25176,
       "first_ts": 1701342000000,
       "first": "2023-11-30T11:00:00Z",
-      "last_ts": 1791910800000,
-      "last": "2026-10-13T17:00:00Z",
+      "last_ts": 1791972000000,
+      "last": "2026-10-14T10:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,
@@ -27,11 +27,11 @@
     },
     "4h": {
       "tf": "4h",
-      "n_rows": 6290,
+      "n_rows": 6294,
       "first_ts": 1701331200000,
       "first": "2023-11-30T08:00:00Z",
-      "last_ts": 1791892800000,
-      "last": "2026-10-13T12:00:00Z",
+      "last_ts": 1791950400000,
+      "last": "2026-10-14T04:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,
@@ -39,11 +39,11 @@
     },
     "1d": {
       "tf": "1d",
-      "n_rows": 1048,
+      "n_rows": 1049,
       "first_ts": 1701302400000,
       "first": "2023-11-30T00:00:00Z",
-      "last_ts": 1791763200000,
-      "last": "2026-10-12T00:00:00Z",
+      "last_ts": 1791849600000,
+      "last": "2026-10-13T00:00:00Z",
       "n_gaps": 0,
       "missing_candles": 0,
       "n_zero_volume": 0,
